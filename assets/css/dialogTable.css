@@ -1,0 +1,50 @@
+
+.pokemon-stats {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.pokemon-stats td {
+  vertical-align: top;
+}
+
+.pokemon-stats td:first-child {
+  width: 170px;
+  white-space: normal;
+  word-break: break-word;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.pokemon-stats td:last-child {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.td_left {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.td_end {
+  padding-bottom: 50px;
+}
+
+.td_start {
+  padding-top: 30px;
+}
+.td_wrap {
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}

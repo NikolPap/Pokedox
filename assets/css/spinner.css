@@ -1,0 +1,14 @@
+.spinner {
+  display: none;
+  animation: spin 3s linear infinite;
+  width: 250px;
+  height: 250px;
+  margin: 50px auto;
+  filter: invert(100%) sepia(32%) saturate(6200%) hue-rotate(287deg)
+        brightness(102%) contrast(92%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

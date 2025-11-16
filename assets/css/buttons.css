@@ -1,0 +1,24 @@
+.open_dialog_button {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 5%;
+}
+
+.open_dialog_button:hover {
+  opacity: 0.3;
+}
+
+#load_more {
+  display: none;
+  background-color: rgb(80, 50, 52);
+  color: rgb(255, 152, 162);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgb(255, 152, 162);
+}
+
+#load_less {
+  display: none;
+  background-color: rgb(80, 50, 52);
+  color: rgb(255, 152, 162);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgb(255, 152, 162);
+}

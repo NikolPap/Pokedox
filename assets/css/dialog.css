@@ -1,0 +1,72 @@
+dialog {
+  background-color: rgb(18, 10, 11);
+  color: whitesmoke;
+  border: none;
+  border-radius: 5%;
+  padding: 0;
+}
+
+dialog::backdrop {
+  background-color: black;
+  opacity: 0.8;
+  transition: all 1s ease-in;
+}
+
+#dialog_headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(18, 10, 11) !important;
+  padding: 10px;
+}
+
+#dialog_headline .main_info {
+  background-color: rgb(18, 10, 11);
+}
+
+#dialog_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0;
+}
+
+.main-image-dialog {
+  width: 350px;
+  height: 248px;
+}
+
+.type_icons_dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(18, 10, 11);
+  padding: 5px;
+}
+
+.nav-link {
+  color: white !important;
+  width: 116px;
+  display: flex !important;
+  justify-content: center;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 152, 162);
+}
+
+.nav_link_border {
+  border-right: 1px solid rgb(80, 50, 52) !important;
+}
+
+#pokemons_info {
+  width: 350px;
+  background-color: rgb(80, 50, 52) !important;
+}
+
+.pokemon-stats {
+  background-color: rgb(80, 50, 52) !important;
+}

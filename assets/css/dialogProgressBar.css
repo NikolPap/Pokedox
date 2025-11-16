@@ -1,0 +1,21 @@
+.progress {
+  margin: 10px;
+  width: 50%;
+  height: 8px !important;
+}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.progress_end {
+  padding-bottom: 20px;
+}
+
+.progress-bar {
+  height: 10px !important;
+  background-color: rgb(197, 30, 30) !important;
+}

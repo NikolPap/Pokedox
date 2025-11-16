@@ -1,0 +1,13 @@
+.type_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(80, 50, 52);
+  padding: 15px;
+}
+
+.box_shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgb(255, 152, 162);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

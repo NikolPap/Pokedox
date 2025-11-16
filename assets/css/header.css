@@ -1,0 +1,35 @@
+header {
+  height: 40px;
+  background-color: rgb(80, 50, 52);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.header_logo_text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_logo_img {
+  filter: invert(100%) sepia(32%) saturate(6200%) hue-rotate(287deg)
+        brightness(102%) contrast(92%);
+  width: 50px;
+  height: 50px;
+}
+
+.header_inner {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
