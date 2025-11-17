@@ -24,18 +24,14 @@ function openEvoChainDialog(i) {
   renderEvoChainDialog(i);
   setActiveNavLink("evo-chain");
 }
-
-function previousPhoto(i, bgColor) {
-  i = i - 1;
-  if ((i = 0)) {
-    document.getElementById("previous_pokemon").style.display = "none";
-  } else {
-    document.getElementById("previous_pokemon").style.display = "none";
-  }
-  openDialog(i, bgColor);
+function previousPokemon(i, bgColor) {
+  const newIndex = i - 1;
+  if (newIndex < 0) return; 
+  openDialog(newIndex, null, bgColor); 
 }
 
-function forwardPhoto(i, bgColor) {
-  i = i + 1;
-  openDialog(i, bgColor);
+function nextPokemon(i, bgColor) {
+  const newIndex = i + 1;
+  if (newIndex >= pokemons.length) return; 
+  openDialog(newIndex, null, bgColor);
 }

@@ -77,13 +77,13 @@ function getDialogsButtonSection(i, bgColor) {
   return `
     <button
       tabindex="-1"
-      onclick="previousPhoto(${i}, '${bgColor}')"
+      onclick="previousPokemon(${i}, '${bgColor}')"
       id="previous_pokemon"   class="arrows">
       <img class="arrow" src="./assets/icons/arrow-left-circle-fill (1).svg" alt="left arrow">
     </button>
     <button
       tabindex="-1"
-      onclick="forwardPhoto(${i}, '${bgColor}')"
+      onclick="nextPokemon(${i}, '${bgColor}')"
       id="next_pokemon"
       class="arrows">
         <img class="arrow" src="./assets/icons/arrow-right-circle-fill (1).svg" alt="rigth arrow">
