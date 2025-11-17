@@ -1,0 +1,27 @@
+@media (max-width: 400px) {
+    .header_logo_text {
+        display: none;
+    }
+
+    .nav-link {
+        width: 85px;
+    }
+
+    .pokemons_info {
+        display: contents;
+    }
+
+    .main-image-dialog {
+        width: 265px;
+    }
+
+    .pokemon-stats td:first-child {
+        padding-left: 5px;
+    }
+    #pokemons_info {
+  width: 265px;
+
+  padding-left: 10px;
+  
+}
+    }

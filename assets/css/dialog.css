@@ -70,6 +70,8 @@ dialog::backdrop {
 #pokemons_info {
   width: 350px;
   background-color: rgb(80, 50, 52) !important;
+  padding-left: 50px;
+  
 }
 
 .pokemon-stats {
