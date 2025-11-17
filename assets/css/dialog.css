@@ -14,10 +14,15 @@ dialog::backdrop {
 
 #dialog_headline {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: rgb(18, 10, 11) !important;
-  padding: 10px;
+}
+
+.close_button {
+  background: none;
+  color: white;
+  border: none;
 }
 
 #dialog_headline .main_info {
@@ -71,9 +76,19 @@ dialog::backdrop {
   width: 350px;
   background-color: rgb(80, 50, 52) !important;
   padding-left: 50px;
-  
 }
 
 .pokemon-stats {
   background-color: rgb(80, 50, 52) !important;
+}
+
+.arrows{
+  background: none;
+  border:none;
+}
+
+.arrow {
+  width: 50px;
+   filter: invert(100%) sepia(32%) saturate(6200%) hue-rotate(287deg)
+        brightness(102%) contrast(92%);
 }
