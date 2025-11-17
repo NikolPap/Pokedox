@@ -104,7 +104,7 @@ async function displayEvoChainImages(evoNames) {
       const pokeResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
       const pokeData = await pokeResponse.json();
       const imageUrl = pokeData.sprites.other.dream_world.front_default;
-      evoChainDiv.innerHTML += `<img src="${imageUrl}" alt="${name}" style="width:100px; margin:5px; padding-top:40px; padding-bottom:40px;">`;
+      evoChainDiv.innerHTML += `<img src="${imageUrl}" alt="${name}" style="width:75px; margin:5px; padding-top:40px; padding-bottom:40px;">`;
     } catch (error) {
       console.error(`Error fetching Pokémon ${name}:`, error);
     }

@@ -39,23 +39,23 @@ function getDialogMainTemplate(i) {
   const abilitiesList = pokemons[i].abilities
   .map(a => a.ability?.name)
   .join(", ");
-  return `<table class="pokemon-stats">
+  return `<div class="pokemons_info"><table class="pokemon-stats">
   <tbody>
     <tr><td class="td_left td_start">Height</td><td class="td_start">:${pokemons[i].height}</td></tr>
     <tr><td class="td_left">Weight</td><td>:${pokemons[i].weight}kg</td></tr>
     <tr><td class="td_left">Base Experience</td><td>:${pokemons[i].base_experience}</td></tr>
     <tr><td class="td_left td_end">Abilities</td><td class="td_end td_wrap">:${
-      pokemons[i].abilities.map(a => a.ability?.name).join(", ")
+      pokemons[i].abilities.map(a => a.ability?.name).join(", <br> ")
     }</td></tr>
   </tbody>
-</table>`
+</table><div>`
 }
 
 
 function getDialogNavTemplate(i) {
   return `<a onclick="openMainDialog(${i})" class="nav-link nav_link_border active" aria-current="page" href="#">main</a>
         <a onclick="openStatsDialog(${i})" class="nav-link nav_link_border" href="#">stats</a>
-        <a onclick="openEvoChainDialog(${i})" class="nav-link" href="#">evo chain</a>`
+        <a onclick="openEvoChainDialog(${i})" class="nav-link" href="#">chain</a>`
 }
 
 
