@@ -42,3 +42,26 @@ input::placeholder {
   color: rgb(255, 152, 162);
   opacity: 1;
 }
+
+#error-box {
+  display: none;
+  background: #ff4d4d;
+  color: white;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadein 0.2s ease-out;
+}
+
+.skeleton-card {
+  width: 180px;
+  height: 250px;
+  background: linear-gradient(90deg, #e4e4e4 25%, #f0f0f0 50%, #e4e4e4 75%);
+  border-radius: 12px;
+  margin: 12px;
+  animation: shimmer 1.5s infinite;
+  background-size: 200% 100%;
+}
+

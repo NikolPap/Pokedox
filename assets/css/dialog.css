@@ -53,6 +53,11 @@ dialog::backdrop {
   justify-content: center;
 }
 
+.active {
+  text-decoration: underline !important;
+  text-decoration-color: rgb(255, 152, 162) !important;
+}
+
 .nav-link:hover {
   text-decoration: underline;
   text-decoration-color: rgb(255, 152, 162);
