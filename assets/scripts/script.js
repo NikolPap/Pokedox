@@ -24,20 +24,6 @@ const typeColors = {
 
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
 
-
-
-function showError(message) {
-  const box = document.getElementById("error-box");
-  box.innerText = message;
-  box.style.display = "block";
-
-  setTimeout(() => {
-    box.style.display = "none";
-  }, 4000);
-}
-
-
-
 async function getAllPokemons(path) {
   try {
     const response = await fetch(BASE_URL + path);
@@ -51,25 +37,20 @@ async function getAllPokemons(path) {
   }
 }
 
-
-
-async function getPokemon(offset, number) {
+async function getPokemon(offset, number_of_pokemons) {
   try {
     const ids = [];
-    for (let i = offset; i <= number; i++) ids.push(i);
+    for (let i = offset; i <= number_of_pokemons; i++) ids.push(i);
 
     const requests = ids.map((id) => fetchPokemon(id));
 
     const results = await Promise.all(requests);
 
-    pokemons = [...pokemons, ...results.filter((p) => p !== null)];
-
+    pokemons.push(...results.filter((p) => p !== null));
   } catch (error) {
     console.error("getPokemon:", error);
-    showError("Fehler beim Laden mehrerer Pokémon.");
   }
 }
-
 
 async function fetchPokemon(index) {
   try {
@@ -98,51 +79,30 @@ async function fetchPokemon(index) {
   }
 }
 
-
-
-function showSkeleton(count) {
-  const container = document.getElementById("gallery");
-  container.innerHTML = "";
-
-  for (let i = 0; i < count; i++) {
-    container.innerHTML += `
-      <div class="skeleton-card"></div>
-    `;
-  }
-}
-
-
 async function loadData() {
-  showSkeleton(20);
-
   try {
     await getPokemon(1, number_of_pokemons);
 
-    renderPokemon(20);
-    renderPokemonIcon(20);
+    renderPokemon(number_of_pokemons);
+    renderPokemonIcon(number_of_pokemons);
   } catch (error) {
     console.error("loadData:", error);
     showError("Beim Laden ist etwas schiefgelaufen..");
   }
 }
 
+async function loadSpinner() {
+  const spinner = document.getElementById("spinner");
+  spinner.style.display = "block";
 
+  await new Promise((resolve) => setTimeout(resolve, 1500));
 
-async function loadSpinner(showBtn, hideBtn) {
-
-    const spinner = document.getElementById("spinner");
-    spinner.style.display = "block";
-
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    spinner.style.display = "none";
-    document.getElementById("gallery").style.display = "flex";
-    document.getElementById(showBtn).style.display = "block";
-    document.getElementById(hideBtn).style.display = "none";
- 
+  spinner.style.display = "none";
+  document.getElementById("gallery").style.display = "flex";
+  document.getElementById("load_more").style.display = "block";
 }
 
 function init() {
-  loadSpinner("load_more", "load_less");
+  loadSpinner();
   loadData();
 }

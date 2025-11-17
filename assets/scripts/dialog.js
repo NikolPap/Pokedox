@@ -5,14 +5,11 @@ function openDialog(i, event, bgColor) {
   renderPokemonDIalogIcon(i);
   renderMainDialog(i);
   renderDialogNav(i);
+  renderDialogButtons(i, bgColor);
 
   dialogRef.showModal();
   dialogRef.classList.add("opened");
-  event.stopPropagation();
 }
-
-
-
 
 function setActiveNavLink(tab) {
   const navLinks = document.querySelectorAll("#dialog_nav .nav-link");

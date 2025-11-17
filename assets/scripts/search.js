@@ -1,5 +1,12 @@
 function searchPokemon() {
   const query = document.getElementById("search").value.toLowerCase();
+  const loadBtn = document.getElementById("load_more");
+
+  if (query.trim() === "") {
+    loadBtn.style.display = "block";
+  } else {
+    loadBtn.style.display = "none";
+  }
 
   const filtered = pokemons.filter((p) =>
     p.name.toLowerCase().startsWith(query)
