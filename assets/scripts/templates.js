@@ -63,12 +63,12 @@ function getDialogStatsTemplate(i) {
   const statNames = ["hp", "attack", "defense", "special-attack", "special-defense", "speed"];
   let html = "";
   
-  for (let idx = 0; idx < statNames.length; idx++) {
+  for (let index = 0; index< statNames.length; index++) {
     html += `
-      <div class="progress-wrapper${idx === statNames.length - 1 ? ' progress_end' : ''}">
-        <div class="progress-title">${statNames[idx]}</div>
-        <div class="progress" role="progressbar" aria-valuenow="${pokemons[i].stats[idx].base_stat}" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar" style="width:${pokemons[i].stats[idx].base_stat}%"></div>
+      <div class="progress-wrapper${index === statNames.length - 1 ? ' progress_end' : ''}">
+        <div class="progress-title">${statNames[index]}</div>
+        <div class="progress" role="progressbar" aria-valuenow="${pokemons[i].stats[index].base_stat}" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width:${pokemons[i].stats[index].base_stat}%"></div>
         </div>
       </div>`;
   }
