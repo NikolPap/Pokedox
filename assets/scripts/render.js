@@ -81,8 +81,22 @@ function renderMainDialog(i) {
 }
 
 function renderDialogButtons(i, bgColor) {
+ 
   const btbRef = document.getElementById("arrow_buttons");
   btbRef.innerHTML = getDialogsButtonSection(i, bgColor);
+    let previous_buttonRef= document.getElementById("previous_pokemon");
+    let next_button = document.getElementById("next_pokemon")
+   if(i===0) {
+    previous_buttonRef.style.display="none";
+  }else{
+     previous_buttonRef.style.display="block";
+  }
+  
+  if(i == pokemons.length -1) {
+    next_button.style.display= "none";
+  }else {
+   next_button.style.display= "block";
+  }
 }
 
 async function getMainEvolutionChain(pokemonIndex) {
