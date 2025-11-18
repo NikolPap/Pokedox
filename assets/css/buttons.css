@@ -5,6 +5,10 @@
   border-radius: 5%;
 }
 
+.close_button:hover {
+  opacity: 0.3;
+}
+
 
 
 #load_more {
@@ -12,4 +16,39 @@
   background-color: rgb(80, 50, 52);
   color: rgb(255, 152, 162);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 0 10px rgb(255, 152, 162);
+}
+
+#arrow_buttons {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.arrows{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border:none;
+}
+
+.arrow {
+  width: 50px;
+   filter: invert(100%) sepia(32%) saturate(6200%) hue-rotate(287deg)
+        brightness(102%) contrast(92%);
+}
+
+.arrow:hover{
+  opacity: 0.3;
+}
+
+
+#arrow_buttons {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  justify-content: center;
+  width: 247px;
+  padding: 10px;
 }
