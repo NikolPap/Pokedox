@@ -48,11 +48,6 @@
   text-overflow: unset !important;
 }
 
-#arrow_buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 247px;
-  padding: 10px;
-}
+
 
 
