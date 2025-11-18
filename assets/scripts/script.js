@@ -22,7 +22,7 @@ const typeColors = {
   normal: "#A8A878",
 };
 
-const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
+const BASE_URL = "https://pokeapi.co/api/v2/";
 
 async function getAllPokemons(path) {
   try {
@@ -54,7 +54,7 @@ async function getPokemon(offset, number_of_pokemons) {
 
 async function fetchPokemon(index) {
   try {
-    const pokemonResponse = await getAllPokemons(`/${index}/`);
+    const pokemonResponse = await getAllPokemons(`pokemon/${index}/`);
     if (!pokemonResponse) return null;
 
     const speciesResponse = await fetch(pokemonResponse.species.url);
@@ -80,15 +80,10 @@ async function fetchPokemon(index) {
 }
 
 async function loadData() {
-  try {
-    await getPokemon(1, number_of_pokemons);
+  await getPokemon(1, number_of_pokemons);
 
-    renderPokemon(number_of_pokemons);
-    renderPokemonIcon(number_of_pokemons);
-  } catch (error) {
-    console.error("loadData:", error);
-    showError("Beim Laden ist etwas schiefgelaufen..");
-  }
+  renderPokemon(pokemons.length);
+  renderPokemonIcon(pokemons.length);
 }
 
 async function loadSpinner() {
@@ -102,7 +97,7 @@ async function loadSpinner() {
   document.getElementById("load_more").style.display = "block";
 }
 
-function init() {
-  loadSpinner();
-  loadData();
+async function init() {
+  await loadSpinner();
+  await loadData();
 }

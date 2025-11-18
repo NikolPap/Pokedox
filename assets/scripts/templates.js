@@ -73,6 +73,7 @@ function getDialogNavTemplate(i) {
 function getDialogStatsTemplate(statsHtml) {
   return `<div class="pokemon-stats">${statsHtml}</div>`;
 }
+
 function getDialogsButtonSection(i, bgColor) {
   return `
     <button

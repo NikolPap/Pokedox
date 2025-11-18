@@ -1,20 +1,26 @@
 function searchPokemon() {
   const query = document.getElementById("search").value.toLowerCase();
   const loadBtn = document.getElementById("load_more");
+  const gallery = document.getElementById("gallery");
 
   if (query.trim() === "") {
     loadBtn.style.display = "block";
+    renderSearchResults(pokemons);
+    return;
   } else {
     loadBtn.style.display = "none";
   }
 
+  if (query.length < 3) {
+    renderSearchResults(pokemons);
+    return;
+  }
   const filtered = pokemons.filter((p) =>
     p.name.toLowerCase().startsWith(query)
   );
 
   renderSearchResults(filtered);
 }
-
 function renderSearchResults(filteredList) {
   let gallery = document.getElementById("gallery");
   gallery.innerHTML = "";
@@ -51,7 +57,7 @@ function renderSearchIcons(filteredList) {
       let name = t.type.name;
       let color = typeColors[name];
       div.innerHTML += `
-        <img style="background-color:${color}; border-radius:50%; width:20px; padding:5px"
+        <img style="background-color:${color}; border-radius:50%; width:40px; padding:5px"
              src="./assets/icons/${name}.svg">
       `;
     });

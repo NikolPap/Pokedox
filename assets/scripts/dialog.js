@@ -8,7 +8,6 @@ function openDialog(i, event, bgColor) {
   renderDialogButtons(i, bgColor);
 
   dialogRef.showModal();
-  dialogRef.classList.add("opened");
 }
 
 function setActiveNavLink(tab) {
@@ -43,5 +42,4 @@ dialogRef.addEventListener("click", (event) => {
 
 function closeDialog() {
   dialogRef.close();
-  dialogRef.classList.remove("opened");
 }

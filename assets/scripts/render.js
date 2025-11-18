@@ -11,6 +11,7 @@ function renderPokemon(number_of_pokemons) {
 function renderPokemonIcon(number_of_pokemons) {
   for (let i = 0; i < number_of_pokemons; i++) {
     let typeIconsDiv = document.getElementById(`type_icons_${i}`);
+    typeIconsDiv.innerHTML="";
     for (let index = 0; index < pokemons[i].types.length; index++) {
       let typeName = pokemons[i].types[index].type.name;
       let typeColor = typeColors[typeName] || "#777";
@@ -120,7 +121,7 @@ async function displayEvoChainImages(evoNames) {
   for (const name of evoNames) {
     try {
       const pokeResponse = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${name}`
+        BASE_URL + `pokemon/${name}`
       );
       const pokeData = await pokeResponse.json();
       const imageUrl = pokeData.sprites.other.dream_world.front_default;
